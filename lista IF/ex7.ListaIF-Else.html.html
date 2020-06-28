@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color: red">Casa Própria</h2>
+    renda familiar: <input type="text" id="renda" autofocus>
+<br>valor da prestação: <input type="text" name="" id="valor"><br>
+<button onclick="financiamento()">Verificar financiamento</button>
+    <div id="biza"></div>
+
+</body>
+</html>
+<script>
+function financiamento() {
+    var porcent = (Number(valor.value)/Number(renda.value))*100
+    biza.innerHTML = `a prestação corresponde a ${porcent.toFixed(1)}% da renda familiar`
+    if (porcent > 30) { 
+        biza.innerHTML += `<br><b style = "color: red">Será necessário completar a renda familiar</b>`
+    }
+
+
+ }
+</script>

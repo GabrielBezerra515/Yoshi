@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Número de pães por dia: <input type="text" id="pao"><br>
+    Número de bolachas por dia: <input type="text" name="" id="bolacha"><br>
+    Número de copos de achocolatado por dia: <input type="text" name="" id="achocolatado"><br>
+    <button onclick="Verificar()">Verificar Calorias</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function Verificar(){
+var cal1 = Number(pao.value)*50
+var cal2 = Number(bolacha.value)*80
+var cal3 = Number(achocolatado.value)*70
+var cal4 = cal1 + cal2 + cal3;
+
+if ( cal4 < 200) {
+    biza.innerHTML = `Parabéns, vai sair em forma da quarentena!`
+} else if ( cal4 <= 400) {
+    biza.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após a quarentena`
+} else if (cal4 > 400) {
+    biza.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`
+}
+
+}
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+<h1>Seu arroz está bom?</h1>
+tempo no fogo: <input type="text" name="" id="tempo" placeholder="em minutos"><br><br>
+<button onclick="provar()">Provar Arroz</button>
+<div id="div_biza"></div>
+
+
+    </center>
+</body>
+</html>
+<script>
+function provar() {
+    div_biza.innerHTML = '';
+    var tempo1 = Number(tempo.value)
+    var tempo2 = tempo1 * 60
+    if(tempo2 == 300) 
+    {div_biza.innerHTML = `Parabéns! Arroz Perfeito!<br> <img src = "arroz.jpeg" height="190px" width="190px">`} 
+    if(tempo2 < 300){ div_biza.innerHTML = `Arroz Cru!<br> <img src = "cru.jpeg" height="190px" width="190px">`}
+    if(tempo2 > 300){ div_biza.innerHTML = `Arroz está Queimado!<br> <img src = "queimado.jpeg" height="190px" width="190px">`} 
+    
+    
+
+}
+
+
+</script>

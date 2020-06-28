@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Cadastre usuários:<br>
+    <input type="text" id="nome"><br>
+    <button onclick="cadastrar()">Cadastrar</button><br>
+    <button onclick="verificar()">Quantos são da família Silva?</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+let nomes = [];
+let nomesOri = []
+
+function cadastrar(){
+    var ajustar = (nome.value).toUpperCase();
+    nomes.push(ajustar);
+    nomesOri.push(nome.value)
+} 
+
+let count = [];
+
+function verificar(){
+    count = [];
+    resultado.innerHTML ='';
+    for(let i = 0; i < nomes.length; i++){
+        if(nomes[i].indexOf('SILVA') != -1){
+           count.push(nomes[i]);
+        }
+    }
+    resultado.innerHTML += `Existem ${count.length} pessoas com 'Silva' no nome <br>`
+
+    // poderia fazer o resultado do if no primeiro for, porém não sei se condiz com o que
+    // o exercício pede, então fiz este outro.
+    for(let u = 0; u < nomes.length; u++){
+        if(nomes[u].indexOf('SILVA') != -1){
+            resultado.innerHTML += `${nomesOri[u]} <br>`
+        }
+    } 
+}
+
+
+</script>

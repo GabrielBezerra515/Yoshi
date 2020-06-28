@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    informe sua nota em algoritmos:<br>
+    <input type="text" id="nota1" placeholder="Nota 1"><br>
+    <input type="text" id="nota2" placeholder="Nota 2"><br>
+    <button onclick="média()">Verificar resultado</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function média(){
+    var N1 = Number(nota1.value)
+    var N2 = Number(nota2.value)
+    var md = (N1 + N2) /2
+    var resultado = md < 6 ? 'Infelizmente reprovado' : md <= 7.5 ? 'Aprovado - Automação, Seg ou Testes' : 'Aprovado - Dev' ;  
+    biza.innerHTML = resultado
+}
+
+
+</script>

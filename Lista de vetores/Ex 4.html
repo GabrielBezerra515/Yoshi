@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Filmes que mais gosta: <br>
+    <input type="text" id="nome"><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+nomes = [];
+
+function cadastrar(){
+    nomes.push(nome.value);
+    var cor;
+    if (nomes.length % 2 == 0){
+        cor = 'blue';
+    }
+    else
+    {
+       cor = 'red'
+    }
+
+    resultado.innerHTML += `<br><span style="color: ${cor}">${nomes[nomes.length -1]}</span>`
+}
+
+</script>

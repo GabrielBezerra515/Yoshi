@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Auxílio</h1>
+    <input type="text" placeholder="Renda individual" id="ind"><br>
+    <input type="text" placeholder="Renda Familiar" id="fam"><br>
+    <button onclick="analisar()">Analisar auxílio</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function analisar(){
+    var limpar = resultado.innerHTML ='';
+    var individual = Number(ind.value);
+    var familiar = Number(fam.value);
+
+    var renda_Individual = individual <= 1200;
+    var renda_familiar = familiar <= 2500;
+
+    if(renda_Individual==true && renda_familiar == true)
+    {
+        resultado.innerHTML = "Você terá direito ao auxílio!<br>"
+    }
+    else if(renda_Individual == false || renda_familiar == false)
+    {
+        if(renda_Individual == false)
+        {
+            resultado.innerHTML += "Sua renda individual te impede de receber o auxílio!<br>"
+        }
+        if(renda_familiar == false)
+        {
+            resultado.innerHTML += "Sua renda familiar te impede de receber o auxílio!<br>"
+        }
+    }
+}
+
+
+</script>

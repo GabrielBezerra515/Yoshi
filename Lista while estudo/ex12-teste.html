@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="quant" placeholder="quantidade de elefantes"><br>
+    <button onclick="ata()">atazanar medium</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+var contador = 1;
+function ata(){
+    var num = Number(quant.value)
+    
+    while(contador < num){
+        biza.innerHTML += `1 elefante incomoda muita gente <br> ${++contador} elefantes` 
+        // contador++;
+        var cont = 0;
+        while (cont++ < contador){
+            biza.innerHTML += `, incomodam`
+        }
+        biza.innerHTML+= ` muita gente <br>`
+    }
+}
+
+</script>

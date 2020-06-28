@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="bom" placeholder="Time Bom"><br>
+    <input type="text" id="ruim" placeholder="Time Ruim"><br>
+    <button onclick="rep()">Repetir a Realidade</button>
+    <div id="comp"></div>
+
+</body>
+</html>
+<script>
+comp.innerHTML = '';
+var contador = 0; 
+function rep(){
+    while (contador < 10){
+        comp.innerHTML += `<b style="text-transform: uppercase">${bom.value}</b> é melhor do que <b style="text-transform: uppercase">${ruim.value}</b> <br>`
+        contador++;
+    }
+}
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nº de depósitos" id="número"><br>
+    <input type="text" placeholder="Valor do depósito" id="valor"><br>
+    <button onclick="acompanhar()">Acompanhar grana</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function acompanhar(){
+        var limpar = resultado.innerHTML = '';
+        var num = Number(número.value);
+        var val = Number(valor.value);
+        var soma = 0;
+        for(i = 1; i <= num; i++)
+        {
+            if(i % 3 == 0)
+            {
+                soma = soma + val;
+                soma = soma + (soma * 0.01);
+                resultado.innerHTML += `${i}° Mês: R$${soma.toFixed(2)} <img src="estrela.png" style="height: 10px"><br>`
+            }
+            else
+            {
+                resultado.innerHTML += `${i}° Mês: R$${(soma = soma + val).toFixed(2)}<br>`
+            }
+        }
+        resultado.innerHTML += `Total guardado: R$${soma.toFixed(2)}`
+    }
+</script>

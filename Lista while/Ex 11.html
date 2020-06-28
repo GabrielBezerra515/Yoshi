@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="curto()">Curto 3 e 5!</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+
+
+function curto(){
+    biza.innerHTML='';
+    var contador = 0;
+    // var sort = parseInt(Math.random()*100)
+    while(++contador <= 100){
+        
+        if(contador % 3 == 0 && contador % 5 == 0){
+            biza.innerHTML += `<b>É TRI!É PENTA!</b><br>`
+        } else if (contador % 3 == 0 ){
+            biza.innerHTML += `<b>É TRI!</b><br>`
+        } else if (contador % 5 == 0) {
+            biza.innerHTML += `<b>É PENTA!</b><br>`
+        } else {biza.innerHTML += `${contador}<br>`}
+    }
+}
+
+
+
+</script>

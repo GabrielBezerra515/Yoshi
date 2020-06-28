@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Qual time da Grande São Paulo você torce?</h2>
+    
+    <select id="time">
+        <option value="corin">Corinthians</option>
+        <option value="palmeiras">Palmeiras</option>
+        <option value="santos">Santos</option>
+        <option value="sao">São Paulo</option>
+    </select>
+ <br>   <button onclick="falar()">Fale Sobre esse time</button>
+ <div id="biza"></div>
+</body>
+</html>
+<script>
+function falar(){
+    var team2 = (time.value)
+    if (team2 == 'corin') {
+        biza.innerHTML = `<span style="color: white; background-color: black">Salve o Corinthians</span>`
+    } else if (team2 == 'palmeiras') {
+        biza.innerHTML = `<span style="color: white; background-color: green">Salve o alviverde imponente</span>`
+    } else if (team2 == 'santos') {
+        biza.innerHTML = `<span style="color: black; background-color: white">Agora quem dá a bola é o Santos</span>`
+    } else if (team2 == 'sao') {
+        biza.innerHTML = `<span style="color: red; background-color: black">Salve o tricolor Paulista</span>`
+    }
+}
+
+
+</script>

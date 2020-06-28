@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filmes favoritos</h1>
+    Nome: <input type="text" id="nome"><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+let nomes = [];
+
+function cadastrar(){
+    nomes.push(nome.value);
+    resultado.innerHTML = '';
+    if(nomes.length < 3){
+        var terceiro = 'Ainda não existe'
+    }
+    else 
+    {
+        var terceiro = nomes[2];
+    }
+    resultado.innerHTML = `Seu filme favorito: ${nomes[0]}<br>
+                            Seu 3º filme favorito: ${terceiro}<br>
+                            Total de filmes cadastrados: ${nomes.length}`
+}
+
+</script>

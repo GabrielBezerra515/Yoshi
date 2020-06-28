@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Informe um número" id="divisao">
+    <button onclick="por7()">É divisível por 7?</button>
+</body>
+</html>
+<script>
+function por7(){
+    var divs = Number(divisao.value)
+    if (divs % 7 == 0){
+        alert('Sim, é')
+    } else {
+        alert('Não, não é')
+    }
+}
+
+
+
+</script>

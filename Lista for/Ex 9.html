@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Quantas xícaras de café ja tomou na vida?<br>
+    <input type="text" id="café"><br>
+    <button onclick="Quantidade()">Ver Quantidade</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function Quantidade(){
+        var limpar = resultado.innerHTML ='';
+        var qtd = Number(café.value);
+        var Colher_de_Leite = qtd*1;
+        var Colher_de_Café = qtd*2;
+        for(i = 0; i < qtd; i++)
+        {
+            for(n = 0; n < Colher_de_Leite; n++)
+            {
+                resultado.innerHTML += `<img src="pó.png" style="height: 100px">`
+            }
+            for(m = 0; m < Colher_de_Café; m++)
+            {
+                resultado.innerHTML += `<img src="café.png" style="height: 100px">`
+            }
+            resultado.innerHTML += `<br>`
+        } 
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <b>ano:</b><input type="text" name="" id="ano1">
+    <br> <button onclick="Fato()">Ver Fato</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function Fato(){
+    var inf = Number(ano1.value)
+    if (inf < 1965) {biza.innerHTML = `No ano ${inf} o email nem havia sido criado ainda`}
+    if (inf == 1965) {biza.innerHTML = `No ano ${inf} o email estava sendo criado`}
+    if (inf > 1965) {biza.innerHTML = `No ano ${inf} o email já havia sido criado`}
+    if (inf > 1969) {biza.innerHTML = `No ano ${inf} o email já havia sido aprimorado - Poderia ser enviado para outro computador`}
+
+
+
+}
+
+
+
+</script>

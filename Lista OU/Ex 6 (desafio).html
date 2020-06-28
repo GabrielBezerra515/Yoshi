@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    tipo de arroz:<br><select name="" id="tipo">
+        <option value="branco">Branco</option>
+        <option value="int">Integral</option>
+    </select>
+ <br>
+ Tempo de cozimento: <input type="text" id="tempo" placeholder="em minutos">
+<br>
+ quantidade de sal: <input type="text" id="sal" placeholder="em gramas">
+<br>
+<button onclick="avaliar()">Avaliar arroz</button>
+<div id="biza"></div>
+</body>
+</html>
+<script> function avaliar(){
+var tipo1 = tipo.value
+var tempo1 = Number(tempo.value)
+var sal1 = Number(sal.value)
+
+if(tipo1 == 'branco'){
+    if(tempo1 == 10 && sal1 <= 10){
+        biza.innerHTML = `Arroz perfeito<br><img src="branco.jpeg">`
+    } else {biza.innerHTML= `Seu arroz não está perfeito<br><img src="jac.jpeg">`}
+} 
+if(tipo1 == 'int'){
+    if(tempo1 == 20 && sal1 <= 15){
+        biza.innerHTML = `Arroz perfeito<br><img src="integral.jpeg">`
+    } else {biza.innerHTML= `Seu arroz não está perfeito<br><img src="jac.jpeg">`}
+}
+}
+
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="time()">Sortear time</button><br>
+    <img src="" id="foto" style="height: 150px">
+</body>
+</html>
+<script>
+function time(){
+    var ale = parseInt(Math.random() * 4) + 1 
+    if (ale == 1){
+        foto.src = "sp.jpeg"
+    } else if (ale == 2 ){
+        foto.src = "st.jpeg"
+    } else if (ale == 3){
+        foto.src = "ct.jpeg"
+    } else {
+        foto.src = "pm.jpeg"
+    }
+}
+
+
+</script>

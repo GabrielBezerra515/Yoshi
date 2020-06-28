@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Compare Times:</h1>
+    <b>TIME 1: </b><br><br>
+    Nome: <input type="text" id="nome1"><br>
+    Vitórias: <input type="text" id="vitorias1"><br>
+    Empate: <input type="text" id="empate1"><br>
+    Derrota: <input type="text" id="derrota1"><br>
+    <br><br>
+    <b>TIME 2: </b><br><br>
+    Nome: <input type="text" id="nome2"><br>
+    Vitórias: <input type="text" id="vitorias2"><br>
+    Empate: <input type="text" id="empate2"><br>
+    Derrota: <input type="text" id="derrota2"><br>
+    <br>
+    <button onclick="comparar()">Comparar campanhas</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function comparar(){
+    resultado.innerHTML = ``;
+    let time1 = {
+        Nome: nome1.value,
+        Vitorias: Number(vitorias1.value) * 3,
+        Empate: Number(empate1.value) * 1,
+        Derrota: Number(derrota1.value) * 0 
+    }
+    let time2 = {
+        Nome: nome2.value,
+        Vitorias: Number(vitorias2.value) * 3,
+        Empate: Number(empate2.value) * 1,
+        Derrota: Number(derrota2.value) * 0 
+    }
+
+    var sum1 = time1.Derrota + time1.Empate + time1.Vitorias;
+    var sum2 = time2.Derrota + time2.Empate + time2.Vitorias;
+
+    resultado.innerHTML += `O time ${time1.Nome} terminou o campeonato com ${sum1} pontos <br>`
+    resultado.innerHTML += `O time ${time2.Nome} terminou o campeonato com ${sum2} pontos`
+}
+</script>

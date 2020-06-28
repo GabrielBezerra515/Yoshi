@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Fale sobre a quarentena" id="sobre"><br>
+    <input type="text" placeholder="Quantas vezes?" id="quantas"><br>
+    <button onclick="falar()">Falar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function falar(){
+    var limpar = resultado.innerHTML = '';
+    var qtd = Number(quantas.value);
+    for(var i = 0; i < qtd; i++)
+    {
+        resultado.innerHTML += `${i + 1}. ${sobre.value} <br>`;
+    }
+}
+
+</script>

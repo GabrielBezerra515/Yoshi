@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="quero()">Quero um cabalístco</button>
+    <div id="numero"></div><br>
+    <div id="numero1"></div>
+</body>
+</html>
+<script>
+function quero(){
+    var n1 = parseInt(Math.random() * 144) + 1
+    numero.innerHTML = `${n1}`
+    if (n1 == 3 || n1 == 4 || n1 == 7 || n1 == 10 || n1 == 12 || n1 == 144 ){
+        numero1.innerHTML = `Eu S2 números cabalísticos!` 
+    } else {
+        numero1.innerHTML = `Ah, me dá um número bom na próxima!`
+    }
+
+
+
+
+
+
+
+}
+
+
+</script>

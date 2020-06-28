@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Email" id="email" onkeyup="Analisar_email()">
+    <div id="validação"></div>
+</body>
+</html>
+<script>
+function Analisar_email(){
+    var em = email.value
+    var valid = em.indexOf('@');
+    if(valid == -1){
+        validação.innerHTML = `${em} não é válido!`
+    }
+    else {
+        validação.innerHTML = `Parabéns! Este Email é válido!`
+    }
+}
+</script>

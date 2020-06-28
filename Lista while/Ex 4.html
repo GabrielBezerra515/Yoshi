@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="quem" placeholder="Quem vc mais ama?" autofocus><br>
+    <input type="text" id="quanto" placeholder="Quanto você a ama?"><br>
+    <button onclick="amor()">Expressar amor</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+biza.innerHTML= '';
+var contador = 0;
+function amor() {
+    while (contador < quanto.value) {
+        biza.innerHTML += `<b>${quem.value}</b>, eu te amo! <i>Sempre lembre disso!</i><br>`
+        contador++;
+    }
+} 
+
+
+
+
+</script>

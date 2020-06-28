@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="login" placeholder="login"><br>
+    <input type="text" placeholder="Senha" id="senha"><br>
+    <button onclick="ent()">Entrar</button>
+    <div id="biza"></div>
+</body>
+</html>
+</b>
+<script>
+function ent(){
+    var lg = login.value 
+    var sh = senha.value
+    if (lg == 'aidimim' && sh == 'seinha'){
+        biza.innerHTML = `<b style="color: blue">Usuário autenticado com sucesso!<b>`
+    } else {
+        biza.innerHTML = `<b style="color: red">Login e/ou senha inválido(s)<b>`
+    }
+
+
+
+
+}
+
+
+
+
+
+</script>

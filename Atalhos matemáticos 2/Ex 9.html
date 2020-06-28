@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Números pares <b id="par">0</b><br>
+    Número ímpar <b id="impar">0</b><br>
+    <button onclick="sortear()">Sortear Número</button>
+    <div id="nmr"></div>
+</body>
+</html>
+<script>
+var clique_par = 0;
+var clique_impar = 0;
+
+function sortear(){
+var sort = parseInt(Math.random() * 10000) 
+nmr.innerHTML = sort
+
+if (sort % 2 == 0){
+    
+    par.innerHTML = ++clique_par
+} else {
+    
+    impar.innerHTML = ++clique_impar
+}
+
+}
+
+
+
+</script>

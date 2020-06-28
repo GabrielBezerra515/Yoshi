@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Campo Minado da hora!</h1>
+    <button onclick="ativar()">Novo Jogo</button><br><br>
+    Minas: <b id="minas">?</b><br>
+    Explosões: <b id="explo">0</b><br>
+    Pontos: <b id="pontos">0</b><br><br>
+    <div id="resultado" style="height: 153px; width: 250px;">
+    </div>
+</body>
+</html>
+<script>
+    function ativar(){
+        var limpar = resultado.innerHTML ='';
+        var limp = pontos.innerHTML='0';
+        var lim = explo.innerHTML ='0';
+        var count = 0
+        for(i = 1; i <= 12; i++)
+        {   
+            var sorteio1 = (parseInt(Math.random() * 4) + 1);
+            var sorteio2 = (parseInt(Math.random() * 2) + 1);
+            if(i == 4 || i == 8 || i == 12)
+            {   
+                if(sorteio1 == sorteio2){
+                    resultado.innerHTML += ` <img src="ponto.png" onclick="this.src='bomba.png'; perdeu()" style="height: 50px; width: 50px; border: none;"><br>`;
+                    count++;
+                }
+                else 
+                {
+                    resultado.innerHTML += ` <img onclick="this.src = 'borda.png'; ganhou()" style="height: 50px; width: 50px; border: none;" src = "ponto.png"><br>`;
+                }
+            }
+            else
+            {   
+                if(sorteio1 == sorteio2)
+                {
+                    resultado.innerHTML += ` <img src="ponto.png" onclick="this.src='bomba.png'; perdeu()" style="height: 50px; width: 50px; border: none;">`;
+                    count++
+                }
+                else 
+                {
+                    resultado.innerHTML += ` <img onclick="this.src = 'borda.png'; ganhou()" style="height: 50px; width: 50px; border: none;" src = "ponto.png">`;
+                }
+            }
+        }
+        minas.innerHTML = count;
+        
+    }
+    var pont = 0; 
+    var perd = 0;
+    function ganhou(){
+        pont = pont + 100;
+        pontos.innerHTML =  pont;
+    }
+    function perdeu(){
+        perd++;
+        explo.innerHTML =  perd;
+    }
+</script>

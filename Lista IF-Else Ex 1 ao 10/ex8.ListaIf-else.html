@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    temperatura: <input type="text" name="" id="temp"><br>       
+    <button onclick = "clima()">Verificar Clima</button>
+    <div id="div_biza"></div>
+
+</body>
+</html>
+<script>
+function clima() {
+    var aprop = Number(temp.value)
+    if (aprop <10) {
+        div_biza.innerHTML = `<b>Clima apropriado para a conservação do alimento</b><br><img src="maçã.jpeg">`
+    } else {div_biza.innerHTML = `<b>Clima inapropriado para a conservação do alimento</b><br><img src="maçãestragada.jpeg">`}
+}
+
+</script>

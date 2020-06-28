@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    nota 1: <input type="text" id="nota1"><br>
+    <button onclick="classificar()">Classificar aluno</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function classificar(){
+var nota4 = Number(nota1.value);
+if (nota4 < 0 ){ 
+    biza.innerHTML = `Nota ${nota4} é inválida!`
+} else if (nota4 < 5) {
+   biza.innerHTML = `<span style="color: red">Aluno Precisa de muita ajuda</span>`;
+} else if (nota4 <= 7) {
+    biza.innerHTML = `<span style="color: orange">Aluno na média</span>`;
+} else if (nota4 <= 9.5) {
+    biza.innerHTML = `<span style="color: green">Aluno acima da média</span>`;
+} else if (nota4 <= 10) {
+    biza.innerHTML = `<span style="color: blue">Aluno fora da curva</span>`;
+} else if (nota4 > 10) {
+    biza.innerHTML = `Nota ${nota4} é inválida!`
+}
+
+
+}
+</script>

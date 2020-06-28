@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    nota 1: <input type="text" name="" id="nota1" autofocus><br>
+    nota 2: <input type="text" name="" id="nota2"><br>
+    nota 3: <input type="text" name="" id="nota3"><br>
+    <button onclick="desempenho()">Analisar Desempenho</button>
+    <div id="biza"></div>
+    <div id="biza2"></div>
+
+</body>
+</html>
+<script>
+function desempenho() {
+    var média = (Number(nota1.value) + Number(nota2.value) + Number(nota3.value))/3
+    biza.innerHTML = `Sua média foi de ${média}`
+    if(média >= 9.4) {
+        biza2.innerHTML = `<b>Parabéns, você é fora de série!</b>`
+    }
+}
+</script>

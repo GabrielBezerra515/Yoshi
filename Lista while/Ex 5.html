@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sorteio</h1>
+    <input type="text" id="quantos" placeholder="Quantos Números" autofocus><br>
+    <button onclick="sorteio()">Sortear números</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+
+function sorteio(){
+    var contador = 0;
+    biza.innerHTML = '';
+    while(contador < quantos.value) {
+        var num = parseInt(Math.random() * 101)
+        biza.innerHTML += `${num} <br>`
+        contador++;
+     }
+}
+
+
+</script>

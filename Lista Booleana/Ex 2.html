@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Login" id="login1"><br>
+    <input type="text" placeholder="senha" id="senha1"><br>
+    <button onclick="Entrar()">Entrar</button>
+    <div id="verificação"></div>
+    
+</body>
+</html>
+<script>
+function Entrar(){
+    var limpar = verificação.innerHTML = '';
+    var verificação_login = login1.value == "aidimin" ? true : false;
+    var verificação_senha = senha1.value == "seinha" ? true : false;
+    if (verificação_login == true && verificação_senha == true)
+    {
+        verificação.innerHTML = `<span style="color: blue">Usuário autenticado com sucesso!</span>`;
+    }
+    else 
+    {
+        if (verificação_login == false)
+        {
+            verificação.innerHTML += `<span style="color: red">Seu login está inválido!</span><br>`;
+        }
+        if (verificação_senha == false)
+        {
+            verificação.innerHTML += `<span style="color: red">Sua senha está inválida!</span>`;
+            alert("Entre em contato com o suporte para recuperar sua senha");
+        }
+    }
+}
+
+
+
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Frase" id="frase" onkeyup="Analisar_frase()">
+    <div id="div_frase"></div>
+</body>
+
+</html>
+<script>
+    function Analisar_frase() {
+        div_frase.innerHTML = ``;
+        var fr = frase.value;
+        for (i = 0; i < fr.length; i++) {
+            div_frase.innerHTML += `<br>`
+            div_frase.innerHTML += `${fr[i]}`
+        }
+    }
+</script>

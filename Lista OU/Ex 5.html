@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tinder do Buduia</h1>
+declare: <br>
+<select name="" id="pergunta">
+    <option value="1">Preto</option>
+    <option value="2">Vermelho</option>
+    <option value="3">Amarelo</option>
+    <option value="4">Castanho</option>
+</select><br>
+Altura: <input type="text" id="alt"><br>
+<button onclick="deu()">Deu Match?</button>
+<div id="biza"></div>
+</body>
+</html>
+<script>
+function deu(){
+    var perg = Number(pergunta.value)
+    var altura = Number(alt.value)
+    
+        if( altura >= 1.7 && (perg == 1 || perg == 2) ){
+            biza.innerHTML = `<img src="empolgado.jpeg">`
+        } else {biza.innerHTML = `<img src="decepcionado.jpeg">`}
+    
+
+
+}
+
+
+
+
+</script>

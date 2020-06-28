@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Lugares que viajou:<br>
+    <input type="text" id="lugares">
+    <br>
+    <br>
+    <button onclick="cadastrar()">Cadastrar local</button>
+    <br>
+    <br>
+    Consultar local:<br>
+    <input type="text" id="consulta"><br><br>
+    <button onclick="consulta1()">Relembrar viagem</button>
+
+    <div id="Resultado"></div>
+</body>
+</html>
+<script>
+
+var viagens = [];
+
+function cadastrar(){
+    viagens.push(lugares.value);
+}
+
+function consulta1(){
+    Resultado.innerHTML = '';
+    if(lugares.value.length < viagens.length){
+        Resultado.innerHTML = `Você não fez uma ${consulta.value}ª viagem!`
+    }
+    else 
+    {
+        Resultado.innerHTML = `${viagens[Number(consulta.value) -1]}`
+    }
+}
+
+</script>

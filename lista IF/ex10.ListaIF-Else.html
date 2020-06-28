@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    última série assistida: <input type="text" name="" id="ultima" placeholder="SITCOM">
+    <br> total de episódios assistidos: <input type="text" name="" id="assistidos"><br>
+    <button onclick="nivel()">Verificar nível</button>
+    <div id="biza"></div>
+
+</body>
+</html>
+<script>
+function nivel(){
+var assistidos1 = Number(assistidos.value)
+var horas = assistidos1 * 22
+biza.innerHTML = `Vejo que você gosta da série ${ultima.value}`
+if (horas > 1800) {
+    biza.innerHTML += `<br>Uau, você realmente gosta dessa série!`
+}
+}
+</script>

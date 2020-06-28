@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="jogar()">Jogar dado</button>
+    <div id="numero"></div>
+    <img src="" id="foto">
+
+</body>
+</html>
+<script>
+function jogar(){
+    var dado = (parseInt(Math.random() * 6) + 1)
+    if (dado == 1){
+        foto.src="lado1.jpeg"
+    } else if (dado == 2){
+        foto.src == "lado2.jpeg"
+    } else if (dado == 3){
+        foto.src="lado3.jpeg"
+    } else if (dado == 4){
+        foto.src="lado4.jpeg"
+    } else if (dado == 5){
+        foto.src="lado5.jpeg"
+    } else {
+        foto.src="lado6.jpeg"
+    }
+}
+
+</script>

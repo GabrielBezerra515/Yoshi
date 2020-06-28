@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Netflix</h3>
+    Horários de acesso: <input type="text" id="hora">
+    <br> <button onclick="ver()">Ver Recomendação</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+    function ver() {
+        var horario = Number(hora.value)
+        if (horario > 24 ) { alert('informe um horário entre 00:00h e 23:59h')}
+        biza.innerHTML = `O horário ${hora.value} é adequado para assistir sua série favorita! `
+        if(horario >= 19) {
+            if(horario <= 21){ biza.innerHTML = `Não é recomandado que você assista sua série às ${hora.value}h`}
+        }
+    }
+</script>

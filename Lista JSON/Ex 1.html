@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Campeonato:</h1>
+    Vitórias: <input type="text" id="vitorias"><br>
+    Empate: <input type="text" id="empate"><br>
+    Derrota: <input type="text" id="derrota"><br>
+    <br>
+    <button onclick="analisar()">Analisar Campanha</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+function analisar(){
+    resultado.innerHTML = ``;
+    let campanha = {
+        Vitorias: Number(vitorias.value) * 3,
+        Empate: Number(empate.value) * 1,
+        Derrota: Number(derrota.value) * 0 
+    }
+
+    var sum = campanha.Derrota + campanha.Empate + campanha.Vitorias;
+
+    resultado.innerHTML = `O time terminou o campeonato com <b>${sum}</b> pontos`
+
+}
+
+</script>

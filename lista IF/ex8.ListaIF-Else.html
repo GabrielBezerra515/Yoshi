@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    saldo da conta: <input type="text" name="" id="conta"><br>
+    Valor do débito: <input type="text" id="debito"><br>
+    <button onclick="analise()">Analisar conta</button>
+    <div id="biza"></div>
+
+</body>
+</html>
+<script>
+function analise() {
+    var sub = Number(conta.value) - Number(debito.value)
+    biza.innerHTML = `o saldo atual da conta corrente é ${sub}`
+    if (sub < 0) {
+    biza.innerHTML = `<b style = "color: red;">o saldo atual da conta corrente é ${sub}</b>`
+    }
+
+}
+
+
+</script>

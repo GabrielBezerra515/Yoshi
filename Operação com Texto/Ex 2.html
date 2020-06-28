@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nome" onkeyup="Analisar_Nome()" id="nome">
+    <div id="div_nome"></div>
+</body>
+</html>
+<script>
+function Analisar_Nome(){
+    if(nome.value.length >= 10){
+        div_nome.innerHTML = `Nome OK`;
+    }
+    else 
+    {
+        div_nome.innerHTML = `Nome deve ter pelo menos 10 letras`;
+    }
+}
+
+</script>

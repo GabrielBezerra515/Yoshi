@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    
+    saldo da conta: <input type="text" id="conta"><br>
+    Valor do débito: <input type="text" id="debito">
+    <br><button onclick="analisar()">Analisar Conta</button>
+    <div id="biza"></div>
+    
+    </center>   
+</body>
+</html>
+<script>
+function analisar() {
+    biza.innerHTML = '';
+    var sub = Number(conta.value) - Number(debito.value)
+    if (sub < 0) {
+        biza.innerHTML = `<b style = "color: red">o saldo atual da conta corrente é R$${sub.toFixed(2)}</b>`
+    } else {  biza.innerHTML = `<i style= "color: blue"> o saldo atual da conta corrente é R$${sub.toFixed(2)} </i>` }
+}
+
+</script>

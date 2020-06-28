@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  de quantos em quantos dias voce faz musculação <input type="text" id="n1">
+  <button onclick="ver()">Exibir rotina mensal</button>
+  <div id="re"></div>
+</body>
+</html>
+<script>
+  var d = 1;
+  var f = 1;
+  function ver(){
+    var intervalo = Number(n1.value);
+    while(d <=  30){
+      re.innerHTML += `${(d)}. <b> MUSCULAÇÂO </b> <br>`;
+      d++;
+      while(f < intervalo){
+        re.innerHTML += `${(d)}. dormir e comer <br>`;
+        f++;
+        d++;
+      }
+      f = 1;
+    }
+  }
+</script>

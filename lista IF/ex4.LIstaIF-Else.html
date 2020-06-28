@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+    número de latinhas por dia: <input type="text" id="latinha"><br>
+    <button onclick="refri()">Quantos refris</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function refri() {
+    var calculo = Number(latinha.value)*365
+   biza.innerHTML = `você consome ${calculo} por ano.<br>`
+   if (calculo >= 500) {
+        biza.innerHTML += `<span style="color: white; background-color: red">Cuidado com a diabetes!</span>`
+    } 
+    
+}
+
+
+</script>

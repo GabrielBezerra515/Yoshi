@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body><center>
+    <h2>Promoção BOM DOCE</h2>
+    chocolate: <input type="text" name="" id="choc">
+    <br><button onclick="compra()">Compra</button>
+    <div id="biza"></div>
+
+
+</center></body>
+</html>
+<script>
+function compra(){
+    var chocolate = Number(choc.value)
+    var calc; 
+    if(chocolate <= 12) {
+        calc = chocolate*3;
+        biza.innerHTML = `o valor da sua compra foi de R$${calc.toFixed(2)}`;
+    } else {
+        calc = chocolate*2.5; 
+        biza.innerHTML = `o valor da sua compra foi de R$${calc.toFixed(2)}`
+    };
+}
+
+
+</script>

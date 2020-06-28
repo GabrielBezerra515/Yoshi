@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Você já clicou <b id="vezes">0</b> vezes. <button onclick="clica()">Clica neu</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function clica(){
+ var soma = Number(vezes.innerHTML);
+ soma ++;
+vezes.innerHTML = soma;
+if (soma < 5){
+    biza.innerHTML=`Dedo fraquinho, hein`
+} else if (soma <= 10){
+    biza.innerHTML = `Dedo bom, mano`
+} else if (soma <= 15) {
+    biza.innerHTML = `Gosta de clicar, hein!`
+} else if (soma > 15) {
+    biza.innerHTML=`Eita dedo nervoso!`
+}
+}
+
+
+
+
+</script>

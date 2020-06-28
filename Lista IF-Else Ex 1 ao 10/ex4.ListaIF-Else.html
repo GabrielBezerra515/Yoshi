@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    homens: <input type="text" name="" id="homem"><br>
+    mulheres: <input type="text" id="mulher"><br>
+    <button onclick="peso()">Analisar Peso</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function peso() {
+    biza.innerHTML = '';
+    var estimado = (Number(homem.value)*80) + (Number(mulher.value)*60)
+    biza.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${estimado}kg`
+    if(estimado > 800) {
+        biza.innerHTML += `<br><span style = "color: blue">Será necessário descer alguém para que o elevador se movimente</span>`
+    } else { biza.innerHTML += `<br>Elevador pode partir` }
+
+
+}
+
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nota1()" value="um">Nota 1</button>
+    <button onclick="nota2()" value="dois">Nota 2</button>
+    <button onclick="nota3()" value="tres">Nota 3</button>
+    <button onclick="nota4()" value="quatro">Nota 4</button>
+    <button onclick="nota5()" value="cinco">Nota 5</button><br>
+    Sua Avaliação: <div id="biza"></div>
+    <img src="" id="imagem" style="height: 300px">
+</body>
+</html>
+<script>
+    var soma = 0;
+    var avaliacao1 = 0;
+
+function atualizar(){
+    avaliacao1++;
+var média = soma / avaliacao1; 
+biza.innerHTML = média.toFixed(1)
+if (média < 2){
+    imagem.src='triste.jpeg'
+} else if (média <= 3){
+    imagem.src='neutro.jpeg'
+} else if (média <= 4.5){
+    imagem.src='feliz.jpeg'
+} else if (média > 4.5){
+    imagem.src='radiante.jpeg'
+}
+}
+
+function nota1(){
+    soma += 1;
+    atualizar()
+}
+function nota2(){
+    soma += 2;
+    atualizar()
+}
+function nota3(){
+    soma += 3;
+    atualizar()
+}
+function nota4(){
+    soma += 4;
+    atualizar()
+}
+function nota5(){
+    soma += 5;
+    atualizar()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

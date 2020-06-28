@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Dia da Pizza</h3>
+valor da Pizza: <input type="text" name="" id="pizza">
+<br> Número de Amigos: <input type="text" id="amigo">
+<br> <button onclick="biza()">Rola a pizza?</button>
+<div id="biza1"></div>
+
+</body>
+</html>
+<script>
+function biza() {
+    biza1.innerHTML = '';
+    var pizza1 = Number(pizza.value)
+    var amigo2 = Number(amigo.value)
+    var divisão = pizza1/amigo2
+    biza1.innerHTML = `<b>Cada amigo vai pagar R$${divisão} pela Pizza</b>`
+    if (divisão > 20) {
+        biza1.innerHTML += `<br><b>Deu ruim! Pizza muito cara!</b>`
+    } else { biza1.innerHTML += `<br><b>Uhu! Vamos pedir a pizza!</b>`}
+}
+</script>

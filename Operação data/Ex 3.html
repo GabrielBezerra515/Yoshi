@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Sua idade:<br>
+    <input type="text" id="idade"><br>
+    <button onclick="simular()">Simular Aposentadoria</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+function simular(){
+    div_resultado.innerHTML = '';
+    var anoAP = 31536000000 * 65;
+    var anoMH = 31536000000 * 60;
+    var ano = 31536000000;
+    var idadems = Number(idade.value) * ano; 
+    var idadefm = Number(idade.value) * ano; 
+    var idade_homem = 0;
+    var idade_mulher = 0;
+    while (idadefm < anoMH) 
+    {
+        idadefm = idadefm + ano;
+        idade_mulher++;
+    }
+    while (idadems < anoAP) 
+    {
+        idadems = idadems + ano;
+        idade_homem++;
+    }
+    var data0 = Math.abs(new Date()) + (ano * idade_homem);
+    var data1 = Math.abs(new Date()) + (ano * idade_mulher);
+    div_resultado.innerHTML += `Se for homem, faltam ${idade_homem} anos para se aposentar. Poderá se aposentar em ${new Date(data0).getMonth() + 1}/${new Date(data0).getDate()}/${new Date(data0).getFullYear()} <br>`;
+    div_resultado.innerHTML += `Se for Mulher, faltam ${idade_mulher} anos para se aposentar. Poderá se aposentar em ${new Date(data1).getMonth() + 1}/${new Date(data1).getDate()}/ ${new Date(data1).getFullYear()}`;
+}
+</script>

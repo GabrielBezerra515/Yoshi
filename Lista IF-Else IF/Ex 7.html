@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select id="meses" onchange="estacao()">
+        <option >selecione</option>
+        <option value="jan">Janeiro</option>
+        <option value="fev">Fevereiro</option>
+        <option value="mar">Março</option>
+        <option value="abril">Abril</option>
+        <option value="maio">Maio</option>
+        <option value="junho">Junho</option>
+        <option value="julho">julho</option>
+        <option value="ago">Agosto</option>
+        <option value="set">Setembro</option>
+        <option value="out">Outubro</option>
+        <option value="nov">Novembro</option>
+        <option value="dez">Dezembro</option>
+    </select>
+    
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function estacao() {
+    var meses1 = meses.value
+if (meses1 == 'jan') {
+    biza.innerHTML = `<h2>Inverno</h2><img src="inverno.jpeg">`
+} else if (meses1 == 'fev'){
+    biza.innerHTML = `<h2>Inverno</h2><img src="inverno.jpeg">`
+} else if (meses1 == 'mar'){
+    biza.innerHTML = `<h2>Primavera</h2><img src="primavera.jpeg">`
+} else if (meses1 =='abril'){
+    biza.innerHTML = `<h2>Primavera</h2><img src="primavera.jpeg">`
+} else if (meses1 == 'maio') {
+    biza.innerHTML = `<h2>Primavera</h2><img src="primavera.jpeg">`
+} else if (meses1 == 'junho') {
+    biza.innerHTML = `<h2>Verão</h2><img src="verao.jpeg">`
+} else if (meses1 == 'julho') {
+    biza.innerHTML = `<h2>Verão</h2><img src="verao.jpeg">`
+} else if (meses1 == 'ago'){
+    biza.innerHTML = `<h2>Verão</h2><img src="verao.jpeg">`
+} else if (meses1 == 'set') {
+    biza.innerHTML = `<h2>Outono</h2><img src="outono.jpeg">`
+} else if (meses1 == 'out') {
+    biza.innerHTML = `<h2>Outono</h2><img src="outono.jpeg">`
+} else if (meses1 == 'nov') {
+    biza.innerHTML = `<h2>Outono</h2><img src="outono.jpeg">`
+} else if (meses1 == 'dez') {
+    biza.innerHTML = `<h2>Inverno</h2><img src="inverno.jpeg">`
+}
+
+
+
+
+
+
+}
+
+
+</script>

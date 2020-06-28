@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Tempo : <input type="text" placeholder="em anos" id="temp"><br>
+    Quantidade de trigo: <input type="text" placeholder="em kilos" id="trigo"><br>
+    Quantidade de Faltas: <input type="text" id="falt"><br>
+    <button onclick="deu()">Deu Match?</button>
+    <div id="biza"></div>
+</body>
+</html>
+<script>
+function deu(){
+    var temp1 = Number(temp.value)
+    var trig = Number(trigo.value)
+    var falta = Number(falt.value)
+    if (temp1 >= 5 && trig >= 300 && falta  <= 5){
+        biza.innerHTML = `Minha filha será sua!<br><img src="noiva.jpeg">`
+    } else {biza.innerHTML=`Deu Ruim! Trabalhe mais 2 anos.<br><img src="bravo.jpeg">`}
+
+
+
+
+
+}
+
+
+
+
+</script>

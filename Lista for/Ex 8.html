@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Quantas Coca-Cola já bebeu?" id="quant"><br>
+    <button onclick="quantidade()">Ver a quantidade</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function quantidade(){
+        var limpar = resultado.innerHTML = '';
+        var qtd = Number(quant.value);
+        for(var i = 0; i < qtd; i++)
+        {
+            resultado.innerHTML += `<img src="coca.png" style="height: 100px"> `
+        }
+    }
+</script>

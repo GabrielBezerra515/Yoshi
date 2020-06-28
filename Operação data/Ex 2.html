@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Data de Nascimento:<br>
+    <input type="text" placeholder="mm/dd/aaaa" id="data" onkeyup="Analisar_data()">
+    <div id="div_data"></div>
+</body>
+</html>
+<script>
+function Analisar_data(){
+    div_data.innerHTML = ''; 
+    var valor_data = new Date(data.value);
+    DiferençaAno = Math.abs(valor_data - new Date());
+    DiferençaMes = Math.abs(valor_data - new Date());
+    DiferençaDia = Math.abs(valor_data - new Date());
+    var ano = 31536000000;
+    var meses = 2628000000;
+    var dia = 86400000;
+    idade = 0;
+    numMeses = 0;
+    numDias = 0;
+    while (DiferençaAno > ano)
+    {
+        DiferençaAno = DiferençaAno - ano;
+        idade++; 
+    }
+    while (DiferençaMes > meses)
+    {
+        DiferençaMes = DiferençaMes - meses;
+        numMeses++;
+    }
+    while (DiferençaDia > dia)
+    {
+        DiferençaDia = DiferençaDia - dia;
+        numDias++;
+    }
+    div_data.innerHTML = ` Idade: ${idade} anos <br> Meses: ${numMeses} <br> Dias: ${numDias}`
+}
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Poupança</h1>
+    
+    Saldo: R$ <b id="saldo">0.00</b><br>
+    Depósitos: <b id="dep">0</b><br>
+    Saques: <b id="saq">0</b><br><br>
+    
+    <button onclick="cem()">Depositar 100</button> <button onclick="vinte()">Sacar 20</button>
+</body>
+</html>
+<script>
+
+let poupanca = {
+    Saldo: 0,
+    Deposito: 0,
+    Saques: 0
+}
+
+function cem(){
+    poupanca.Saldo = poupanca.Saldo + 100;
+    poupanca.Deposito++;
+    saldo.innerHTML = (poupanca.Saldo).toFixed(2);
+    dep.innerHTML = poupanca.Deposito;
+}
+
+function vinte(){
+    poupanca.Saldo = poupanca.Saldo - 20;
+    poupanca.Saques++;
+    saldo.innerHTML = poupanca.Saldo.toFixed(2);
+    saq.innerHTML = poupanca.Saques;
+}
+</script>

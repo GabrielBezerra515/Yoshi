@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pares()">Eu S2 pares</button>
+    <div id="par"></div>
+</body>
+</html>
+<script>
+
+function pares(){
+    par.innerHTML='';
+    var contador = 0;
+    par.innerHTML = '';
+    while (contador <= 100){
+        var num = parseInt(Math.random() * 101) +1;
+        if (num % 2 == 0){
+            par.innerHTML += `${num} <br>`
+        }
+        contador++;
+    }
+}
+
+
+
+
+</script>

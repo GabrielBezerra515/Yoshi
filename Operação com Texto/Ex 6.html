@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Senha" id="senha" onkeyup="Analisar_senha()">
+    <div id="div_senha"></div>
+</body>
+</html>
+<script>
+function Analisar_senha(){
+    div_senha.innerHTML = '';
+    var sh = senha.value;
+    while (true)
+    {
+        if(sh.indexOf('a') != -1 || sh.indexOf('A') != -1)
+        {
+            sh = sh.replace('a','@');
+            sh = sh.replace('A','@');
+        }
+        else if(sh.indexOf('e') != -1 || sh.indexOf('E') != -1)
+        {
+            sh = sh.replace('e','3');
+            sh = sh.replace('E','3');
+
+        }
+        else 
+        {
+            break
+        }
+        div_senha.innerHTML = sh;
+    }
+
+}
+</script>

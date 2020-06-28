@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Data de Nascimento:<br>
+    <input type="text" placeholder="mm/dd/aaaa" id="data" onkeyup="Analisar_data()">
+    <div id="div_data"></div>
+</body>
+</html>
+<script>
+function Analisar_data(){
+    // limpei a div
+    div_data.innerHTML = '';
+
+    // criei uma var com a data informada pelo usuário 
+    var valor_data = new Date(data.value);
+
+    // peguei a diferença entre as datas ms.
+    // Através do Math.abs ele transforma em ms 
+    Diferença = Math.abs(valor_data - new Date());
+
+    // defino quanto tem tem um ano em ms
+    var ano = 31536000000;
+
+    // crio uma var que vai contar a idade
+    idade = 0;
+
+    // Neste wilhe eu verifico se a diferença em ms é maior que 1 ano em ms
+    // se for eu igualo a a uma subtração simples
+    // subtraio a diferença em 1 ano e aumento a variavel idade em 1 ano
+    while (Diferença > ano)
+    {
+        Diferença = Diferença - ano;
+        idade++; 
+    }
+
+    // dessa forma quando chega aqui temos a variavel diferença igual ao ano, então nao pode ser mais subtraida
+    // então a var idade ta igual a idade atual da pessoa
+    div_data.innerHTML = `Idade: ${idade} anos`
+}
+</script>

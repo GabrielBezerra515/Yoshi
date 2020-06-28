@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Frequência do aluno: <input type="text" id="aluno">
+    <br> <button onclick="analise()">Analisar Frequência</button>
+    <div id="div_biza"></div>
+
+
+</body>
+</html>
+<script>
+function analise() {
+    var aluno1 = Number(aluno.value)
+    var resultado = aluno1 < 50 ? `<img src="silvio.jpeg">` : `<img src="biza.jpeg">`;
+    div_biza.innerHTML = resultado
+}
+
+
+</script>
